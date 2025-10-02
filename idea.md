@@ -1,35 +1,69 @@
-Real-Time Event Booking & Management System
 1. Problem Statement
-Event organizers (colleges, communities, gyms) often manage registrations with spreadsheets or static forms. This causes double-bookings, no real-time seat visibility, messy cancellations, and poor attendee communication. A real-time solution with payments and role-based control is needed.
+
+People who love movies and anime often have to jump between multiple platforms, torrent sites, or unofficial sources. This leads to fragmented experiences, outdated information, and no social interaction while watching. Existing streaming services don’t combine movies + anime + social watch parties in one place.
 
 2. Proposed Solution / Idea
-Build a MERN web app where Organizers create paid/free events with capacities, and Attendees book seats in real time. The app shows live seat availability (via Socket.io), supports secure online payments (Stripe), and sends email confirmations. Organizers get a dashboard for bookings, revenue, and waitlists.
+
+Build a unified streaming web app where users can:
+
+Watch movies and anime in one platform.
+
+Get updates on newly released and upcoming titles.
+
+Create/join watch parties to watch together with friends in real-time (synchronized playback + chat/voice).
+
+Explore trending titles with personalized recommendations.
 
 3. Key Features
-Role-based Auth (Organizer, Attendee)
-Event CRUD (title, date/time, venue, capacity, price, category)
-Real-time seat availability with Socket.io
-Secure payments via Stripe (Payment Intents)
-Booking management (confirm, cancel, waitlist)
-Email confirmations (Nodemailer) (optional for MVP)
-Search & filters (date, price, category, location)
-Organizer dashboard (bookings, revenue)
-4. Target Users / Audience
-College fest teams & clubs
-Workshop/seminar organizers
-Local classes (yoga, dance, sports)
-Community & cultural events
-5. Technology Stack
-Frontend: React (Vite), React Router, Tailwind (optional)
-Backend: Node.js, Express.js, Socket.io
-Database: MongoDB + Mongoose
-Payments: Stripe
-Auth: JWT, bcrypt
-Email (optional): Nodemailer
-Hosting: Vercel (FE), Render/Fly/Heroku (BE), MongoDB Atlas
-6. Expected Outcome
-A production-grade MVP where:
 
-Attendees can book/cancel seats and pay online.
-Organizers see live capacity, manage bookings, and view revenue.
-The system prevents overbooking with server-side checks and real-time locks.
+Content Hub (Movies + Anime in one place)
+
+Release Updates (notifications for new & upcoming titles)
+
+Watch Party Mode (sync video playback, chat/voice, reactions)
+
+Search & Filters (genre, release year, language, rating)
+
+User Profiles (watchlist, history, favorites)
+
+Community Features (ratings, reviews, comments)
+
+(Optional Advanced): AI-based recommendations
+
+4. Target Users / Audience
+
+Anime & movie enthusiasts who want a single platform.
+
+Groups of friends who want to watch content together virtually.
+
+College students, community groups, and families.
+
+Fans who want regular updates on new releases.
+
+5. Technology Stack
+
+Frontend: React (Vite), Tailwind, React Router
+
+Backend: Node.js, Express.js, Socket.io (for watch parties)
+
+Database: MongoDB + Mongoose
+
+Streaming: Video hosting (Cloudflare Stream / AWS S3 + HLS)
+
+Auth: JWT, bcrypt
+
+Real-time: Socket.io for chat & sync playback
+
+Hosting: Vercel (FE), Render/Heroku (BE), MongoDB Atlas
+
+6. Expected Outcome
+
+A streaming web app where:
+
+Users can watch movies + anime seamlessly in one place.
+
+Receive real-time updates on new & upcoming releases.
+
+Watch together with friends via synchronized playback & chat/voice.
+
+Build a community-driven platform with reviews, ratings, and recommendations.
